@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="/paymentConfirm.css">
+</head>
+<body>
+<img src="/logo.jpg" class="avatar"><br><br><br><br><br><br>
+<h1>Slot Booking Succesful!!!✅</h1>
+<h1>Slot Booked on:</h1>
+<h1 th:text="${slotPass}">,Tomorrow</h1>
+<p><a href="http://localhost:8080/consentform">NextStep</a><br><br><br><a href="http://localhost:8080/doctors_info">Reschedule</a></p>
+
+
+</body>
+</html>

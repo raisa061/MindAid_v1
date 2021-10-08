@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <link rel="stylesheet" href="/login_css.css">
+
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+    <style>
+        .jpg {
+            width:auto;
+            text-align:center;
+            padding:20px;
+        }
+        img {
+            width: 10%;
+            height: 10%;
+            object-fit: contain;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+
+<form action="action_page.php" method="post" th:action="@{/postlogininfo}" th:object="${login}" required>
+    <div class="imgcontainer">
+        <img src="/logo.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="email"><b>Username</b></label>
+        <input type="text" id="email" placeholder="Enter email" name="email" th:field="*{email}" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" placeholder="Enter Password" name="psw" th:field="*{password}"required>
+
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+</form>
+</body>
+</html>
